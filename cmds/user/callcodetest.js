@@ -5,12 +5,21 @@ const request = require("request"),
       urls = [];
 
 exports.run = async (bot, message, args) => { 
-let alfa1 = "74293332";
-let brava1 = "87904708";
-let charli1 = "39313471";
+let alfa = "74293332";
+let brava = "87904708";
+let charli = "39313471";
 
-request('')    
-    
+request('https://nukacrypt.com/' function(err, resp, body){
+      if(!err && resp.statusCode == 200){
+            var $ = cheerio.load(body);
+            $('a.title', '#contenttable').each(function(){
+            var url = this.attr('');
+            urls.push(url);
+            });
+        console.log(urls)
+      }
+});    
+
     
 let a = message.author;
     let ambed = new Discord.RichEmbed()
