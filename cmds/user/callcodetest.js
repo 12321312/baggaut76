@@ -9,7 +9,7 @@ let alfa = "74293332";
 let brava = "87904708";
 let charli = "39313471";
 
-request('https://nukacrypt.com/' function(err, resp, body){
+request('https://nukacrypt.com/', function(err, resp, body){
       if(!err && resp.statusCode == 200){
             var $ = cheerio.load(body);
             $('a.title', '#contenttable').each(function(){
