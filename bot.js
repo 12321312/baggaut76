@@ -36,6 +36,7 @@ loadCommands();
 bot.on('message', async message => {
   if(message.author.bot) return;
   if(message.channel.type == "dm") return;
+    
   let args = message.content.slice(prefix.length).trim().split(/ +/g);
   let cmd = args.shift().toLowerCase();
   let command;
@@ -53,17 +54,17 @@ bot.on('message', async message => {
    }
 
    try {
-    command.run(bot, message, args, connection);
+    command.run(bot, message, args);
    } catch (e) {
    }
-   });
+});
    
 bot.on('ready', () => {
   console.log('Запущен, сэр!');
   bot.user.setPresence({
          status: "online",
          game: {
-             name: "твои нервы",
+             name: "Fallout 76",
              url: "https://www.youtube.com/watch?v=6uCTdjTjbWA",
              type: "STREAMING"
          }
