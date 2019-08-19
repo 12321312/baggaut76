@@ -13,7 +13,7 @@ request('https://nukacrypt.com/', function(err, resp, body){
       if(!err && resp.statusCode == 200){
             var $ = cheerio.load(body);
             $('a.title', '#contenttable').each(function(){
-            var url = this.attr('');
+            var url = this.attr('style');
             urls.push(url);
             });
         console.log(urls)
