@@ -1,8 +1,5 @@
 const Discord = module.require("discord.js");
 const fs = require("fs");
-let alfa = "";
-let brava = "";
-let charli = "";
 
 exports.run = async (bot, message, args) => { 
 let alfa = "74293332";
