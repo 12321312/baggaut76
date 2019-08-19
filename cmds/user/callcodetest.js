@@ -14,7 +14,7 @@ request('https://nukacrypt.com/', function(err, resp, body){
             var $ = cheerio.load(body);
             $('a.title', '#contenttable').each(function(){
             var url = this.attr('style');
-            urls.push(url);
+            urls.push("KSJDA:SDL:ASDL");
             });
         console.log(urls)
       }
