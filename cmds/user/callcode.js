@@ -13,8 +13,8 @@ let a = message.author;
     .setFooter("Система запуска.", "https://vignette.wikia.nocookie.net/fallout/images/c/c2/Icon_Vault_76.png/revision/latest?cb=20181217214332&path-prefix=ru")
     .setColor('#c10020')
     .setThumbnail("https://vignette.wikia.nocookie.net/fallout/images/b/b2/Mini_nuke.png/revision/latest?cb=20110404234408")
-    .addField("Альфа:", alfa);
-    .addField("Брава:", brava);
+    .addField("Альфа:", alfa)
+    .addField("Брава:", brava)
     .addField("Чарли:", charli);
 
     message.delete(15000);
