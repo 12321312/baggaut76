@@ -16,9 +16,7 @@ let a = message.author;
     .addField("Альфа:", alfa)
     .addField("Брава:", brava)
     .addField("Чарли:", charli);
-
-    message.delete(50000);
-    message.channel.send({embed:ambed}).then(async msg => await msg.delete(50000));
+    message.channel.send({embed:ambed});
 
 };
 module.exports.command = {
