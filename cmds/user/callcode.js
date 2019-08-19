@@ -14,7 +14,7 @@ let a = message.author;
     .setColor('#c10020')
     .setThumbnail("https://vignette.wikia.nocookie.net/fallout/images/b/b2/Mini_nuke.png/revision/latest?cb=20110404234408")
     .addField("Альфа:", alfa)
-    .addField("Брава:", brava)
+    .addField("Браво:", brava)
     .addField("Чарли:", charli);
     message.channel.send({embed:ambed});
 
