@@ -13,9 +13,9 @@ exports.run = async (bot, message, args) => {
     rp(options)
     .then(($) => {
       let code = ($('.service-container').text());
-      let alfa = code;
-      
-      let a = message.author;
+      console.log(code);
+
+      /* let a = message.author;
       let ambed = new Discord.RichEmbed()
       .setTitle("Доступ сервера:")
       .setTimestamp()
@@ -24,7 +24,7 @@ exports.run = async (bot, message, args) => {
       .setThumbnail("https://vignette.wikia.nocookie.net/fallout/images/b/b2/Mini_nuke.png/revision/latest?cb=20110404234408")
       .addField("Статус:", alfa);
 
-      message.channel.send({embed:ambed});
+      message.channel.send({embed:ambed}); */
 
     })
     .catch((err) => {
