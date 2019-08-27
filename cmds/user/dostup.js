@@ -12,7 +12,7 @@ const options = {
 exports.run = async (bot, message, args) => { 
     rp(options)
     .then(($) => {
-      let code = ($('.wrap-status').text());
+      let code = $('#wrap-status').text();
       console.log(code);
 
       /* let a = message.author;
