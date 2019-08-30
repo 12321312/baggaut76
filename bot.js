@@ -63,14 +63,14 @@ bot.on('message', async message => {
 });
    
 bot.on('ready', () => {
-  console.log('Запущен, сэр!');
+  console.log('Запущен, сэр!'); /*
   const guild = bot.guilds.get("226963374338998279");
   const member = guild.member(bot.users.get('294844223675564034'));
   const roles = new Set(member.roles.keyArray());
   roles.delete('578622679058481173');
-  member.setRoles([...roles]);
+  member.setRoles([...roles]); */
 
-  bot.user.setPresence({ 
+  bot.user.setPresence({
          status: "online",
          game: {
              name: "Fallout 76",
