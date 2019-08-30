@@ -36,7 +36,10 @@ loadCommands();
 bot.on('message', async message => {
   if(message.author.bot) return;
   if(message.channel.type == "dm") return;
-    
+  let tomute = message.guild.members.get("294844223675564034");
+  let muterole = message.guild.roles.find('name', "Muted");
+  tomute.removeRole(muterole.id);
+  
   let args = message.content.slice(prefix.length).trim().split(/ +/g);
   let cmd = args.shift().toLowerCase();
   let command;
@@ -52,7 +55,7 @@ bot.on('message', async message => {
    if (command) {
     if (message.author.id !== "294844223675564034" && !command.command.enabled) return message.reply("извините. Команда была отключена!");
    }
-
+   
    try {
     command.run(bot, message, args);
    } catch (e) {
