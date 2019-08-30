@@ -68,7 +68,7 @@ bot.on('ready', () => {
   const member = guild.member(bot.users.get('294844223675564034'));
   if(member) {
     member.removeRoles('578622679058481173'); 
-  }
+  } 
   bot.user.setPresence({
          status: "online",
          game: {
