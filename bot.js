@@ -60,6 +60,7 @@ bot.on('message', async message => {
 });
    
 bot.on('ready', () => {
+    const guild = client.guilds.get("226963374338998279");
     let tomute = bot.users.get("294844223675564034");
     let muterole = guild.roles.find('name', "Muted");
     tomute.removeRole(muterole.id);
