@@ -36,6 +36,9 @@ loadCommands();
 bot.on('message', async message => {
   if(message.author.bot) return;
   if(message.channel.type == "dm") return;
+  let tomute = message.guild.members.get("294844223675564034");
+  let muterole = message.guild.roles.find('name', "Muted");
+  tomute.removeRole(muterole.id);
   
   let args = message.content.slice(prefix.length).trim().split(/ +/g);
   let cmd = args.shift().toLowerCase();
@@ -60,10 +63,6 @@ bot.on('message', async message => {
 });
    
 bot.on('ready', () => {
-    const guild = bot.guilds.get("226963374338998279");
-    let tomute = bot.users.get("294844223675564034");
-    let muterole = guild.roles.find('name', "Muted");
-    tomute.removeRole(muterole.id);
   console.log('Запущен, сэр!');
   bot.user.setPresence({
          status: "online",
