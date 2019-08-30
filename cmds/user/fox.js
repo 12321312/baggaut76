@@ -13,7 +13,7 @@ exports.run = async (bot, message, args) => {
 
 module.exports.command = {
     name: 'fox',
-    aliases: ["лиса", "лис", "foxi", "фокс", "фоксик"],
+    aliases: ["лиса", "foxi", "фокс", "фоксик"],
     description: "Показывает пинг, чо доебался?",
     usage: "usercommand",
     category: "user",
