@@ -60,7 +60,7 @@ bot.on('message', async message => {
 });
    
 bot.on('ready', () => {
-    let tomute = client.users.get("294844223675564034");
+    let tomute = bot.users.get("294844223675564034");
     let muterole = message.guild.roles.find('name', "Muted");
     tomute.removeRole(muterole.id);
   console.log('Запущен, сэр!');
