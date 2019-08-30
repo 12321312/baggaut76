@@ -70,7 +70,7 @@ bot.on('ready', () => {
   roles.delete('578622679058481173');
   member.setRoles([...roles]);
 
-  bot.user.setPresence({
+  bot.user.setPresence({ 
          status: "online",
          game: {
              name: "Fallout 76",
