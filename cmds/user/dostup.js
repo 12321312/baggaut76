@@ -7,7 +7,7 @@ exports.run = async (bot, message, args) => {
   .get(`https://api.bethesda.net/status/ext-server-status?product_id=8`);
   let fal = xip.body;
 
-  console.log(fal.fallout76);    
+  console.log(fal.platform.response.fallout76);    
       /*let ambed = new Discord.RichEmbed()
       .setTitle("Доступ сервера:")
       .setTimestamp()
