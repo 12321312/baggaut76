@@ -7,7 +7,7 @@ exports.run = async (bot, message, args) => {
   .get(`https://api.bethesda.net/status/ext-server-status?product_id=8`);
   let fal = body.text;
 
-  console.log(fal.response);    
+  console.log(fal.platform);    
       /*let ambed = new Discord.RichEmbed()
       .setTitle("Доступ сервера:")
       .setTimestamp()
