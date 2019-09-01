@@ -5,7 +5,9 @@ const superagent = require("superagent");
 exports.run = async (bot, message, args) => { 
   let body = await superagent
   .get(`https://api.bethesda.net/status/ext-server-status?product_id=8`);
-  console.log(body.text);    
+  let fal = body.text;
+
+  console.log(fal.response);    
       /*let ambed = new Discord.RichEmbed()
       .setTitle("Доступ сервера:")
       .setTimestamp()
