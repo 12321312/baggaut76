@@ -3,7 +3,7 @@ const fs = require("fs");
 const superagent = require("superagent");
 
 exports.run = async (bot, message, args) => { 
-  let {body} = await superagent
+  let body = await superagent
   .get(`https://api.bethesda.net/status/ext-server-status?product_id=8`);
   console.log(body.text);    
       /*let ambed = new Discord.RichEmbed()
