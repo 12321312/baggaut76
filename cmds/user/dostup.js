@@ -5,18 +5,27 @@ const superagent = require("superagent");
 exports.run = async (bot, message, args) => { 
   let xip = await superagent
   .get(`https://api.bethesda.net/status/ext-server-status?product_id=8`);
-  let fal = xip.body;
+  let status = xip.body.platform.response.fallout76;
+  if(status === "UP") {
+    status = "Онлайн";
+    urlst = "https://cdn.icon-icons.com/icons2/894/PNG/512/Tick_Mark_icon-icons.com_69146.png";
+    colorst = "#00FF00";
+  }
+  if(status != "UP") {
+    status = "Недоступен";
+    urlst = "http://s1.iconbird.com/ico/0612/prettyoffice/w256h2561339405847Delete256.png";
+    colorst = "#FF0000";
+  }  
 
-  console.log(fal.platform.response.fallout76);    
-      /*let ambed = new Discord.RichEmbed()
-      .setTitle("Доступ сервера:")
+  console.log(xip.body.platform.response.fallout76); 
+
+      let ambed = new Discord.RichEmbed()
       .setTimestamp()
-      .setFooter("Систем доступ.", "https://vignette.wikia.nocookie.net/fallout/images/c/c2/Icon_Vault_76.png/revision/latest?cb=20181217214332&path-prefix=ru")
-      .setColor('#c10020')
-      .setThumbnail("https://vignette.wikia.nocookie.net/fallout/images/b/b2/Mini_nuke.png/revision/latest?cb=20110404234408")
-      .addField("Статус:", body.fallout76);
+      .setColor(colorst)
+      .setThumbnail(urlst)
+      .addField("Статус:", status);
 
-      message.channel.send({embed:ambed}); */
+      message.channel.send({embed:ambed}); 
 
 }; 
 
