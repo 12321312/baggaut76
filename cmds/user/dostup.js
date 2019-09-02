@@ -23,7 +23,7 @@ exports.run = async (bot, message, args) => {
       .setTimestamp()
       .setColor(colorst)
       .setThumbnail(urlst)
-      .addField("Статус:", status);
+      .addField("Статус сервера:", status);
 
       message.channel.send({embed:ambed}); 
 
