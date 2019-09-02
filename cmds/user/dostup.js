@@ -6,16 +6,16 @@ exports.run = async (bot, message, args) => {
   let xip = await superagent
   .get(`https://api.bethesda.net/status/ext-server-status?product_id=8`);
   let status = xip.body.platform.response.fallout76;
+  
   if(status === "UP") {
     status = "Онлайн";
     urlst = "https://cdn.icon-icons.com/icons2/894/PNG/512/Tick_Mark_icon-icons.com_69146.png";
     colorst = "#00FF00";
-  }
-  if(status != "UP") {
+  } else {
     status = "Недоступен";
     urlst = "http://s1.iconbird.com/ico/0612/prettyoffice/w256h2561339405847Delete256.png";
     colorst = "#FF0000";
-  }  
+  };  
 
   console.log(xip.body.platform.response.fallout76); 
 
