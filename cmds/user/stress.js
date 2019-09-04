@@ -8,8 +8,8 @@ exports.run = async (bot, message, args) => {
 
 
 module.exports.command = {
-    name: 'fox',
-    aliases: ["лиса", "foxi", "фокс", "фоксик"],
+    name: 'stress',
+    aliases: ["стресс", "стрес", "стреса", "великий"],
     description: "Показывает пинг, чо доебался?",
     usage: "usercommand",
     category: "user",
