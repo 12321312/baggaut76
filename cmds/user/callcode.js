@@ -14,10 +14,11 @@ exports.run = async (bot, message, args) => {
   .then(($) => {
     let code = $('#nuclearcodess').text();
     let mcode = code.replace(/\s+/g, '');
-
-    let alfa = mcode.slice(31, -40);
-    let brava = mcode.slice(39, -32);
-    let charli = mcode.slice(47, -24);
+    
+    let alfa = mcode.slice(47, -40);
+    let brava = mcode.slice(55, -32);
+    let charli = mcode.slice(63, -24);
+    let ckakogo = mcode.slice(17, -70);
 
     if (charli === "UNSOLVED") charli = "Нет данных.";
     if (brava === "UNSOLVED") brava = "Нет данных.";
@@ -25,7 +26,7 @@ exports.run = async (bot, message, args) => {
     
     let a = message.author;
     let ambed = new Discord.RichEmbed()
-    .setTitle("Коды запуска ракет:")
+    .setTitle(`Коды запуска ракет *${ckakogo}*:`)
     .setDescription(`https://nukacrypt.com/`)
     .setTimestamp()
     .setFooter("Система запуска.", "https://vignette.wikia.nocookie.net/fallout/images/c/c2/Icon_Vault_76.png/revision/latest?cb=20181217214332&path-prefix=ru")
