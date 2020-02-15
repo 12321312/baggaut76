@@ -25,10 +25,10 @@ exports.run = async (bot, message, args) => {
      charli = mcode.slice(64, -24);
      ckakogo = mcode.slice(17, -69);
     } else if (mcode.length == 97) {
-     alfa = mcode.slice(47, -40);
-     brava = mcode.slice(55, -32);
-     charli = mcode.slice(63, -24);
-     ckakogo = mcode.slice(16, -69);
+     alfa = mcode.slice(49, -40);
+     brava = mcode.slice(57, -32);
+     charli = mcode.slice(65, -24);
+     ckakogo = mcode.slice(18, -69);
     } else if (mcode.length == 95) {
       alfa = mcode.slice(49, -40);
       brava = mcode.slice(57, -32);
@@ -53,7 +53,9 @@ exports.run = async (bot, message, args) => {
     if (args[0] == "+") ambed.addField("length:", `**${mcode.length}**`, false)
     if (args[0] == "+") ambed.addField("mcode:", `**${mcode}**`, false)
 
-    message.channel.send({embed:ambed});    
+    if (message.author.id == "382528907544625155") { 
+      message.reply('ты Фокса обижаешь, тебе коды не скажу.');
+    } else message.channel.send({embed:ambed}); 
   })
   .catch((err) => {
     console.log(err);
