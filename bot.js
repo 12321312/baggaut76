@@ -41,6 +41,8 @@ bot.on('message', async message => {
   let cmd = args.shift().toLowerCase();
   let command;
 
+  await message.react(bot.emojis.get("556493079486529548"));
+
    if (bot.commands.has(cmd)) {
     command = bot.commands.get(cmd);
    } else if (bot.aliases.has(cmd)) {
