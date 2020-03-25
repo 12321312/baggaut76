@@ -19,6 +19,7 @@ exports.run = async (bot, message, args) => {
     let charli;
     let ckakogo;
     
+
     if (mcode.length == 96) {
      alfa = mcode.slice(48, -40);
      brava = mcode.slice(56, -32);
@@ -49,7 +50,6 @@ exports.run = async (bot, message, args) => {
     let ambed = new Discord.RichEmbed()
     .setTitle(`Коды запуска ракет:`)
     .setDescription(`https://nukacrypt.com/`)
-    .setThumbnail("http://pngimg.com/uploads/gavel/gavel_PNG45.png")
     .setTimestamp()
     .setFooter("Система запуска.", "https://vignette.wikia.nocookie.net/fallout/images/c/c2/Icon_Vault_76.png/revision/latest?cb=20181217214332&path-prefix=ru")
     .setColor('#c10020')
